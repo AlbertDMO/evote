@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+	<title>Test1</title>
+	<style>
+	
+		.ui-datatable-data tr{
+ 		   height: 20px !important;
+		}		
+	</style>
+	</h:head>
+	<h:form>
+	<p:panel id="testTable" style="width:800px;" header="Hibernate Test">
+		<p:dataTable  var="test"  value="#{testController.lista}" editable="true">
+			<p:column headerText="Id" >
+			<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.id}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<h:outputText value="#{test.id}" />
+				 </f:facet>
+				 </p:cellEditor>
+			</p:column>
+			<p:column headerText="Nombre">
+			<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.name}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<h:inputText value="#{test.name}" />
+				 </f:facet>
+				 </p:cellEditor>
+			</p:column>
+		 	<p:column headerText="Apellido">
+		 	<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.apellido}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<h:inputText value="#{test.apellido}" />
+				 </f:facet>
+				 </p:cellEditor>
+		 	</p:column>
+		 	<p:column headerText="Editar">
+		 	<p:rowEditor />
+		 	</p:column>
+		</p:dataTable>
+		<f:facet name="footer">
+			<p:commandButton value="Add new" action="#{testController.addNew}" process="@this" update="testTable" immediate="true"></p:commandButton>
+			<p:commandButton value="Save" action="#{testController.save}" update="testTable"/>
+		</f:facet>
+	</p:panel>
+	
+	<p:panel id="usersTable" style="width:800px;" header="Users Test">
+		<p:dataTable  var="test"  value="#{usuarioController.users}" editable="true">
+			<p:column headerText="Id" >
+			<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.id}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<h:outputText value="#{test.id}" />
+				 </f:facet>
+				 </p:cellEditor>
+			</p:column>
+			<p:column headerText="Nombre">
+			<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.nombres}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<h:inputText value="#{test.nombres}" />
+				 </f:facet>
+				 </p:cellEditor>
+			</p:column>
+		 	<p:column headerText="Apellido Paterno">
+		 	<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.apPaterno}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<h:inputText value="#{test.apPaterno}" />
+				 </f:facet>
+				 </p:cellEditor>
+		 	</p:column>
+		 			 	<p:column headerText="Apellido Materno">
+		 	<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.apMaterno}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<h:inputText value="#{test.apMaterno}" />
+				 </f:facet>
+				 </p:cellEditor>
+		 	</p:column>
+		 	
+		 	<p:column headerText="Fecha de Nacimiento">
+		 	<p:cellEditor>
+				 <f:facet name="output">
+				 	<h:outputText value="#{test.getFechaNacimientoAsString()}" />
+				 </f:facet>
+				 <f:facet name="input">
+				 	<p:calendar value="#{test.fechaNacimiento}"/>
+				 </f:facet>
+				 </p:cellEditor>
+		 	</p:column>
+		 	
+		 	<p:column headerText="Editar">
+		 	<p:rowEditor />
+		 	</p:column>
+		</p:dataTable>
+		<f:facet name="footer">
+			<p:commandButton value="Add new" action="#{usuarioController.addNew}" process="@this" update="usersTable" immediate="true"></p:commandButton>
+			<p:commandButton value="Save" action="#{usuarioController.save}" update="usersTable"/>
+		</f:facet>
+	</p:panel>
+	
+	</h:form>
+	<h:body>
+		
+	</h:body>
+
+</html>

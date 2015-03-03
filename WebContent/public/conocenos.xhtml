@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="author" content="Rosas Cruz Erick Alejandro"/>
+		<link rel="stylesheet" type="text/css" href="../1_style/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../1_style/font.css"/>
+        <title>e-vote</title>
+	</h:head>
+	<h:body >
+		<p:layout fullPage="true">
+			<p:layoutUnit position="west" size="10%" />
+			<p:layoutUnit position="east" size="10%" />
+			<p:layoutUnit position="north">
+				<h:outputText styleClass="title" value="e - vote" />
+				<p:menubar>
+					<p:menuitem value="Principal" url=""/>
+					<p:menuitem value="Conocenos" url=""/>
+					<p:menuitem value="Buscar Votación" url=""/>
+					<p:menuitem value="Preguntas Frecuentes" url=""/>
+				</p:menubar>
+			</p:layoutUnit>
+			<p:layoutUnit position="south" size="50">
+				<p:link href="" value="Aviso de Privacidad" />
+				<p:link href="" value="Términos y condiciones" />
+			</p:layoutUnit>
+			<p:layoutUnit position="center">				
+				<p:panel styleClass="content">
+				
+					<h:outputText value="Conocenos" />
+					
+				</p:panel>				
+			</p:layoutUnit>
+		</p:layout>
+	</h:body> 	
+</html>

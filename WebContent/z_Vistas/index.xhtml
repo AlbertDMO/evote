@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<title>e-vote</title>
+	</h:head>	
+
+	<h:body>
+		<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="50" header="e-vote" />
+		<p:layoutUnit position="west" size="250"  >
+		<h:form>
+		<p:menu>
+		<p:submenu label="Menu">
+			<p:menuitem value="Inicio" url="http://localhost:8080/e-vote/index1.jsf"/>
+            <p:menuitem value="Votaciones" url="http://localhost:8080/e-vote/index.jsf"/>
+            <p:menuitem value="Resultados" url="http://localhost:8080/e-vote/index2.jsf"/>
+            <p:menuitem value="Administracion" url="http://localhost:8080/e-vote/index3.jsf"/>
+            </p:submenu>
+    </p:menu>
+    </h:form>
+		</p:layoutUnit>
+		<p:layoutUnit position="center">
+		<p:panel header="Votacion" style="height:95%;">
+			<p:dashboard id="board" model="#{dashboard.model}">
+            
+            <p:panel id="Candidato1" header="Opcion 1">
+                <h:outputText value="" />
+            </p:panel>
+ 
+            <p:panel id="Candidato2" header="Opcion 2">
+                <h:outputText value="" />
+            </p:panel>
+ 
+            <p:panel id="Candidato3" header="Opcion 3">
+                <h:outputText value=""  />
+            </p:panel>
+ 
+            <p:panel id="Candidato4" header="Opcion 4">
+                <h:outputText value="" />
+            </p:panel>
+        </p:dashboard>
+        <p:commandButton value="Votar"/>
+		</p:panel>
+		</p:layoutUnit>
+		
+		</p:layout>
+	</h:body>
+	
+</html>

@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+@font-face{
+  font-family:Folks-Light;
+  src:url("./font/Folks-Light.ttf")format("truetype");}
+@font-face{
+  font-family: Folks-Normal;
+  src:url("./font/Folks-Normal.ttf")format("truetype");}
+@font-face{
+  font-family: Folks-Bold;
+  src:url("./font/Folks-Bold.ttf")format("truetype");}
+@font-face{
+  font-family: Folks-Heavy;
+  src:url("./font/Folks-Heavy.ttf")format("truetype");}
+
+body * {
+  font-family: Folks-Normal;}
+h1 {
+  font-family: Folks-Heavy;}
+h2,h3,h4 {
+  font-family: Folks-Bold;}
+  /*-----
+a {
+  font-family: Folks-Light;}
+/*---------------*/
+.title{
+	margin: 0;
+	font-size: 40pt;
+	font-family: Folks-Heavy;
+}
+.h1{
+	display: block;
+	margin-bottom: 12pt;
+	font-size: 30pt;
+	font-family: Folks-Bold;
+}
+.h2{
+	display: block;
+	margin-bottom: 12pt;
+	font-size: 20pt;
+	font-family: Folks-Bold;
+}
+.textlf{
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+.text{
+	text-decoration: none;
+}
+.ui-layout-south .ui-link{
+	text-decoration: none;
+	font-family: Folks-Light;
+	padding-right: 25px;		
+} 

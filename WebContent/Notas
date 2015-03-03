@@ -1,0 +1,59 @@
+-----------Buscar Votacion -------------------
+<p:dataTable id="eventsDT" var="car" value="#{dtSelectionView.cars3}" selectionMode="single" selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}"
+paginator="true" paginatorPosition="bottom"
+paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}">
+
+	<p:ajax event="rowSelect" listener="#{dtSelectionView.onRowSelect}" update=":form:msgs" />
+	<p:ajax event="rowUnselect" listener="#{dtSelectionView.onRowUnselect}" update=":form:msgs" />
+
+	<p:column headerText="Nombre">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+	<p:column headerText="Fecha de Inicio">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+	<p:column headerText="Fecha de Fin">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+	<p:column headerText="Votos Emitidos">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+</p:dataTable>
+-----------user-Index-Votaciones -------------------
+
+
+
+
+-----------user-Index-Anteriores -------------------
+<p:dataTable id="eventsDT" var="car" value="#{dtSelectionView.cars3}" selectionMode="single" selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}"
+paginator="true" paginatorPosition="bottom"
+paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}">
+
+	<p:ajax event="rowSelect" listener="#{dtSelectionView.onRowSelect}" update=":form:msgs" />
+	<p:ajax event="rowUnselect" listener="#{dtSelectionView.onRowUnselect}" update=":form:msgs" />
+
+	<p:column headerText="Nombre">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+	<p:column headerText="Fecha de Inicio">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+	<p:column headerText="Fecha de Fin">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+	<p:column headerText="Votos Emitidos">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+	<p:column headerText="Resultado">
+		<h:outputText value="#{car.id}" />
+	</p:column>
+	
+</p:dataTable>
